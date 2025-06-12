@@ -17,11 +17,11 @@ function getZodiac(month) {
 }
 
 const fortunes = [
-  'Today is a great day to start something new.',
-  'You will find what you have been looking for.',
-  'Challenges ahead will make you stronger.',
-  'A pleasant surprise is waiting for you.',
-  'Trust your instincts; they will guide you well.'
+  '✨ Today is a great day to start something new.',
+  '🌟 You will find what you have been looking for.',
+  '🔥 Challenges ahead will make you stronger.',
+  '🎁 A pleasant surprise is waiting for you.',
+  '🧠 Trust your instincts; they will guide you well.'
 ];
 
 function getRandomFortune() {
@@ -39,8 +39,10 @@ function generateHoroscope() {
   const zodiac = getZodiac(monthInput);
   const fortune = getRandomFortune();
 
-  document.getElementById('result').innerHTML = `
-    🌌 Your Star Sign is <strong>${zodiac.sign}</strong> ${zodiac.symbol} <br />
-    🔮 Your Fortune: <em>${fortune}</em>
+  const result = document.getElementById('result');
+  result.innerHTML = `
+    <strong>🌌 Your Sign:</strong> ${zodiac.sign} ${zodiac.symbol} <br/><br/>
+    <strong>🔮 Fortune:</strong> ${fortune}
   `;
+  result.classList.add('show');
 }

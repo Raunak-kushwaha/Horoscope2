@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Horoscope App</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <h1>🌟 Horoscope Generator</h1>
-    <label for="month">Select your birth month:</label>
+  <div class="background"></div>
+
+  <main class="card">
+    <h1>🔮 Know Your Horoscope</h1>
+    </br>
+    <label for="month">But first... we need to know your birth Month:</label>
+  </br>
     <select id="month">
-      <option value="">--Choose Month--</option>
+      <option value=""> Select Month </option>
       <option>January</option>
       <option>February</option>
       <option>March</option>
@@ -26,10 +31,14 @@
       <option>December</option>
     </select>
 
-    <button onclick="generateHoroscope()">Get Horoscope</button>
+    <button onclick="generateHoroscope()">Get My Horoscope!</button>
 
     <div id="result"></div>
-  </div>
+  </main>
+
+  <footer>
+    made with ❤️ by Raunak
+  </footer>
 
   <script src="script.js"></script>
 </body>
